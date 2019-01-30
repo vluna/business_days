@@ -1,4 +1,5 @@
 require "business_days/version"
+require 'business_days/init'
 require 'business_days/day'
 
 module BusinessDays
