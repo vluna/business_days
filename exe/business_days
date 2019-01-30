@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require 'business_days/cli'
+BusinessDays::CLI.start
