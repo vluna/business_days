@@ -1,0 +1,15 @@
+holidays: [{
+    title: "New Year's",
+    description: "Happy New Year",
+    start_date: "01-01",
+    end_date: "01-01",
+    full_day: 1,
+    observed: 1,
+  },{
+    title: "New Year's Eve",
+    description: "New Year's Eve",
+    start_date: "12-31",
+    end_date: "11-31",
+    full_day: 0,
+    observed: 0,
+  }]
