@@ -5,12 +5,13 @@ module BusinessDays
   class CLI < Thor
 		desc "days 'start_date' 'end_date'", "Get the business days between two dates"
 		def days(start_date, end_date)
+			BusinessDays::Init::INIT_CONFIG[:work_week] = %(mon tue)
 		  puts BusinessDays::Day.days(start_date, end_date)
 		end
 
-		desc "init", "Return initial configuration"
-		def init
-		  puts BusinessDays::Init::INIT_CONFIG
+		desc "init file", "Return initial configuration"
+		def init(file)
+		  puts BusinessDays::Init::INIT_CONFIG[:holidays] << BusinessDays::Init.load_config(file)
 		end
 
 		desc "load_file 'file_path'", "Reads a file"
